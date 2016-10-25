@@ -18,10 +18,8 @@
             "pinType"
           ],
           "default": {
-            "guid": "",
-            "os": "",
-            "prefs": [],
-            "versionRange": [{}]
+            "pins": [],
+            "versions": []
           },
           "properties": {
             "id": {
