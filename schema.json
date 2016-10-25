@@ -1,0 +1,87 @@
+{
+  "collections": {
+    "pins": {
+      "name": "Pins",
+      "synced": true,
+      "config": {
+        "displayFields": ["pinType", "hostName"],
+        "attachment": {
+            "enabled": false, 
+            "required": false
+        },
+        "schema": {
+          "title": "Pins",
+          "description": "Pins",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "pinType"
+          ],
+          "default": {
+            "pins": [],
+            "versions": []
+          },
+          "properties": {
+            "id": {
+              "type": "string",
+              "title": "Id",
+              "description": "Record id."
+            },
+            "schema": {
+              "type": "integer",
+              "title": "Schema version",
+              "description": "Schema version."
+            },
+            "expires": {
+                "type": "integer"
+            }, 
+            "hostName": {
+                "type": "string"
+            }, 
+            "includeSubdomains": {
+                "type": "boolean"
+            }, 
+            "pinType": {
+                "type": "string"
+            }, 
+            "pins": {
+                "items": {
+                    "title": "pin", 
+                    "type": "string"
+                }, 
+                "title": "Pins", 
+                "type": "array"
+            }, 
+            "versions": {
+                "items": {
+                    "title": "version", 
+                    "type": "string"
+                }, 
+                "title": "Versions", 
+                "type": "array"
+            }
+          },
+          "sort": "-last_modified", 
+          "uiSchema": {
+            "ui:order": [
+              "id",
+              "schema",
+              "pinType", 
+              "hostName", 
+              "includeSubdomains", 
+              "expires", 
+              "pins", 
+              "versions"
+            ],
+            "id": {
+              "ui:widget": "hidden"
+            },
+            "schema": {
+              "ui:widget": "hidden"
+            }
+          }
+        }
+      }
+    }
+  }
+}
